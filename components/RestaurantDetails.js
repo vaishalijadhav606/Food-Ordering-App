@@ -6,56 +6,56 @@ import { Actions } from 'react-native-router-flux';
 const DATA = [
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
-        img: '../assets/1.jpg',
+        img: 'https://res.cloudinary.com/sivadass/image/upload/v1535181121/dummy-products/restaurants/adayar-anandha-bhavan.jpg',
         name: 'Dish1',
         type: 'Indian',
         price: 200
     },
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28bb',
-        img: '../assets/2.jpg',
+        img: 'https://res.cloudinary.com/sivadass/image/upload/v1535181121/dummy-products/restaurants/anjappar.jpg',
         name: 'Dish2',
         type: 'Quick Bites',
         price: 600
     },
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28bc',
-        img: 'assets/3.jpg',
+        img: 'https://res.cloudinary.com/sivadass/image/upload/v1535181119/dummy-products/restaurants/buhari.jpg',
         name: 'Dish3',
         type: 'Indian',
         price: 500
     },
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28be',
-        img: 'assets/4.jpg',
+        img: 'https://res.cloudinary.com/sivadass/image/upload/v1535181121/dummy-products/restaurants/gupta-bhavan.jpg',
         name: 'Dish4',
         type: 'Indian',
         price: 500
     },
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28be',
-        img: 'assets/4.jpg',
+        img: 'http://res.cloudinary.com/sivadass/image/upload/v1535181126/dummy-products/restaurants/hot-chips.jpg',
         name: 'Dish5',
         type: 'Indian',
         price: 800
     },
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28bf',
-        img: 'assets/4.jpg',
+        img: 'https://res.cloudinary.com/sivadass/image/upload/v1535181121/dummy-products/restaurants/paradise.jpg',
         name: 'Dish6',
         type: 'Indian',
         price: 500
     },
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28bg',
-        img: 'assets/4.jpg',
+        img: 'https://res.cloudinary.com/sivadass/image/upload/v1535181121/dummy-products/restaurants/saravana-bhavan.jpg',
         name: 'Dish7',
         type: 'Indian',
         price: 800
     },
     {
         id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28bfh',
-        img: 'assets/4.jpg',
+        img: 'https://res.cloudinary.com/sivadass/image/upload/v1535181121/dummy-products/restaurants/paradise.jpg',
         name: 'Dish8',
         type: 'Indian',
         price: 500
@@ -152,7 +152,7 @@ export class RestaurantDetails extends Component {
                                 columnWrapperStyle={styles.column}
                                 renderItem={({ item }) => (
                                     <View style={styles.itemDetails}>
-                                        <Image source={require('../assets/1.jpg')} style={styles.imgPre} />
+                                        <Image source={{ uri: item.img }} style={styles.imgPre} />
                                         <Text style={styles.location}>{item.type}</Text>
                                         <Text style={styles.name}>{item.name}</Text>
                                         <View style={styles.btnContainer}>
