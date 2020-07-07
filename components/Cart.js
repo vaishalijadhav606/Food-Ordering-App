@@ -4,8 +4,12 @@ import { Actions } from 'react-native-router-flux';
 
 export default class Cart extends Component {
     render() {
+        console.warn(this.props.data);
         return (
             <View style={styles.container}>
+                <Text>
+                {this.props.data}
+               </Text>
                 <Image source={require('../assets/empty-cart.png')} style={styles.emptyCart}></Image>
                 <Text style={styles.heading}>Good food is always cooking</Text>
                 <Text style={styles.description}>Your cart is empty</Text>

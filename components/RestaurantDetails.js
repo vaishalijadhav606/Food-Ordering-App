@@ -102,6 +102,10 @@ export class RestaurantDetails extends Component {
         })
     }
 
+    onPressNext(){
+        Actions.cart({data : "Hello World"});
+    }
+
 
     render() {
         let btnAdd;
@@ -128,8 +132,8 @@ export class RestaurantDetails extends Component {
         if (this.state.clicks != 0) {
             cartContainer = <View style={styles.cartDetails}>
                 <Text style={styles.cartText}>{this.state.clicks} Item  |  &#8377;200</Text>
-                <View style={styles.detailsbtn} onPress={() => Actions.cart()}>
-                    <Text style={styles.cartText}>View Cart</Text>
+                <View style={styles.detailsbtn}>
+                    <Text style={styles.cartText} onPress={this.onPressNext.bind(this)}>View Cart</Text>
                     <Image source={require('../assets/cart-bag.png')} style={{ width: 25, height: 25, marginLeft: 10 }}></Image>
                 </View>
             </View>
@@ -181,7 +185,7 @@ const styles = StyleSheet.create({
         position: 'relative'
     },
     listdetails: {
-        marginVertical: 20,
+        marginVertical: 10,
         marginBottom: 120
     },
     itemDetails: {
@@ -280,9 +284,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        width: '100%',
         right: 0,
-        paddingHorizontal: 10
+        paddingHorizontal: 20,
     },
     cartText: {
         color: '#ffffff',
